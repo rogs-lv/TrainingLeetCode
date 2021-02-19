@@ -2,21 +2,29 @@
 
 namespace _1480.RunningSumof1dArray
 {
-    class Program
+    public class ProgramRunning
     {
         static void Main(string[] args)
         {
-            Random rd = new Random();
-            int size = rd.Next(1,10);
-            int[] arr = new int[size];
-            for (int i = 0; i < size; i++) {
-                arr[i] = rd.Next(1, 50);
-            }
-            Console.WriteLine("Input : " +  String.Join(",", arr));
-            int[] result = RunningSum(arr);
-            Console.WriteLine("Output : " + String.Join(",", result));
+            //Random rd = new Random();
+            //int size = rd.Next(1, 10);
+            //int[] arr = new int[size];
+            //for (int i = 0; i < size; i++)
+            //{
+            //    arr[i] = rd.Next(1, 50);
+            //}
+            //Console.WriteLine("Input : " + String.Join(",", arr));
+            //int[] result = RunningSum(arr);
+            //Console.WriteLine("Output : " + String.Join(",", result));
         }
-        public static int[] RunningSum(int[] nums)
+        /// <summary>
+        /// Big O
+        /// Complejidad: O(n) - Por ser un solo arreglo a recorrer con un 
+        /// retorno del mismo tipo y longitud.
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int[] RunningSum(int[] nums)
         {
             int len = nums.Length;
             int[] newArray = new int[len];
