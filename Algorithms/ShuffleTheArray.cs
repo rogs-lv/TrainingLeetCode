@@ -1,27 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace _1470.ShuffletheArray
+namespace Algorithms
 {
-    public class ProgramShufflet
+    public class ShuffleTheArray
     {
-        static void Main(string[] args)
-        {
-            //Random rd = new Random();
-            //int n = rd.Next(2, 10);
-            ////Only pair numbers
-            ///*while (n%2 != 0) {
-            //    n = rd.Next(2, 20);
-            //}*/
-            //int len = n * 2;
-            //int[] arr = new int[len];
-            //for (int j = 0; j < len; j++)
-            //{
-            //    arr[j] = rd.Next(2, 100);
-            //}
-            //Console.WriteLine("Input: n: {0}, nums: [{1}]", n, String.Join(",", arr));
-            //int[] result = Shuffle(arr, n);
-            //Console.WriteLine("Output: {0}", String.Join(",", result));
-        }
         /// <summary>
         /// Complejidad: O(n) - Un arreglo a retornar del mismo tipo, sin importar
         /// la condición ya que no afecta el ciclo for. 
