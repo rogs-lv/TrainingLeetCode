@@ -7,15 +7,18 @@ namespace Algorithms
     public class ShuffleTheArray
     {
         /// <summary>
-        /// Complejidad: O(n) - Un arreglo a retornar del mismo tipo, sin importar
-        /// la condición ya que no afecta el ciclo for. 
+        /// Complexity: O(n) - For each element from 0 to n, We use flag to determine order of elements that we'll add a new array
         /// </summary>
-        /// <param name="nums"></param>
-        /// <param name="n"></param>
-        /// <returns></returns>
-        public int[] Shuffle(int[] nums, int n)
+        /// <param name="numsArray">Numbers array</param>
+        /// <param name="n">Items to take and combine</param>
+        /// <returns>Returns the array with combined values</returns>
+        public int[] Shuffle(int[] numsArray, int n)
         {
-            int lenArray = nums.Length;
+            if (numsArray == null) return new int[] { };
+            if (numsArray.Length == 0) return numsArray;
+            if (n < 1 || n > 500 || ((n * 2) != numsArray.Length)) return new int[] { };
+
+            int lenArray = numsArray.Length;
             int[] newArr = new int[lenArray];
             bool flag = true;
             int j = n;
@@ -24,13 +27,13 @@ namespace Algorithms
             {
                 if (flag)
                 {
-                    newArr[i] = nums[l];
+                    newArr[i] = numsArray[l];
                     l++;
                     flag = false;
                 }
                 else
                 {
-                    newArr[i] = nums[j];
+                    newArr[i] = numsArray[j];
                     j++;
                     flag = true;
                 }

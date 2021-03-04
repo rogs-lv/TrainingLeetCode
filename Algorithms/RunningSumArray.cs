@@ -8,33 +8,32 @@ namespace Algorithms
     {
         /// <summary>
         /// Big O
-        /// Complejidad: O(n) - El arreglo solo se recorre una unica vez y se le resta la posición 
-        /// anterior que ya tiene el ultimo valor acumulado
+        /// Complexity: O(n) - The array is only traversed once, and the new value is the current position plus the value of the previous position, with accumulated value
         /// </summary>
-        /// <param name="nums">Array de enteros</param>
-        /// <returns>Array de enteros</returns>
-        public int[] RunningSum(int[] nums)
+        /// <param name="numsArray">Numbers array</param>
+        /// <returns>Return the running sum of numbers.</returns>
+        public int[] RunningSum(int[] numsArray)
         {
-            int len = nums.Length;
-            for (int i = 0; i < len; i++)
+            if (numsArray == null) return new int[] { };
+            if (numsArray.Length == 0 || numsArray.Length == 1) return numsArray;
+
+            int len = numsArray.Length;
+
+            for (int i = 1; i < len; i++)
             {
-                if (i > 0)
-                    nums[i] = nums[i - 1] + nums[i];
-                else
-                    nums[i] = nums[i];
+                numsArray[i] = numsArray[i - 1] + numsArray[i];
             }
-            return nums;
+            return numsArray;
         }
         /// <summary>
         /// Big O 
-        /// Complejidad: O(N2) - Se tienen dos ciclos recorriendo el mismo arreglo, y el segundo lo recorre
-        /// hasta la posicion n-1 del primer ciclo
+        /// Complexity: O(N2) - There are two cycles going through the same matrix, the second one goes to position n-1 of the first cycle
         /// </summary>
-        /// <param name="nums"></param>
-        /// <returns></returns>
-        //public int[] RunningSum(int[] nums)
+        /// <param name="numsArray">Numbers array</param>
+        /// <returns>Return the running sum of numbers.</returns>
+        //public int[] RunningSum(int[] numsArray)
         //{
-        //    int len = nums.Length;
+        //    int len = numsArray.Length;
         //    int[] newArray = new int[len];
         //    for (int i = 0; i < len; i++)
         //    {
@@ -43,12 +42,12 @@ namespace Algorithms
         //            int acum = 0;
         //            for (int j = 0; j <= i; j++)
         //            {
-        //                acum += nums[j];
+        //                acum += numsArray[j];
         //                newArray[i] = acum;
         //            }
         //        }
         //        else
-        //            newArray[i] = nums[i];
+        //            newArray[i] = numsArray[i];
         //    }
         //    return newArray;
         //}

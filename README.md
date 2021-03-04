@@ -2,7 +2,7 @@
 Leetcode exercise for training. A solution with multiple console applications.
 
 ## Build
-
+This project was generated with [NET Core](https://docs.microsoft.com/en-us/dotnet/core/tools/) version 3.1.8
 Run `dotnet build` to build the project.
 
 ## Test
