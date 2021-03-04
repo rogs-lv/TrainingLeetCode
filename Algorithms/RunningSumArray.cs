@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Algorithms
@@ -16,6 +17,7 @@ namespace Algorithms
         {
             if (numsArray == null) return new int[] { };
             if (numsArray.Length == 0 || numsArray.Length == 1) return numsArray;
+            if (numsArray.Min() < -1000000 || numsArray.Max() > 1000000) return numsArray;
 
             int len = numsArray.Length;
 

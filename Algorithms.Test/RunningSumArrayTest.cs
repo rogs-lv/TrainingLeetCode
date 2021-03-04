@@ -43,5 +43,20 @@ namespace Algorithms.Test
             var result = _runningSumArray.RunningSum(numsArray);
             Assert.Equal(numsArray, result);
         }
+        [Fact]
+        public void RunningSum_ArrayWithNegativeNumber_ReturnSameArray() {
+            int[] numsArray = new int[] { -1000001, 2, 1 };
+
+            var result = _runningSumArray.RunningSum(numsArray);
+            Assert.Equal(numsArray, result);
+        }
+        [Fact]
+        public void RunningSum_ArrayWithNumberMoreThan_ReturnSameArray()
+        {
+            int[] numsArray = new int[] { 1000001, 4, 1 };
+
+            var result = _runningSumArray.RunningSum(numsArray);
+            Assert.Equal(numsArray, result);
+        }
     }
 }
