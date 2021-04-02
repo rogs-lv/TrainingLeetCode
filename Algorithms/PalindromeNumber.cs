@@ -11,18 +11,19 @@ namespace Algorithms
         /// </summary>
         /// <param name="number">value to evaluate</param>
         /// <returns>true if is palindrome or false if is not</returns>
-        public bool IsPalindrome(int number) {
+        public bool IsPalindrome(int number)
+        {
             if (number < 0) return false; //Numbers negatives never will true
             if (number <= 9 && number >= 0) return true; // Numbers with only digits always will true
 
-            int leng = number.ToString().Length;
-            char[] arr = number.ToString().ToCharArray();
+            int lenghtNumber = number.ToString().Length;
+            char[] arrayOfNumbers = number.ToString().ToCharArray();
 
-            int midpoint = (leng%2) == 1 ? (leng - 1) / 2 : leng / 2; // 1 is not even number || 0 is even number
+            int midpoint = (lenghtNumber % 2) == 1 ? (lenghtNumber - 1) / 2 : lenghtNumber / 2; // 1 is not even number || 0 is even number
             for (int i = 0; i < midpoint; i++)
             {
-                int idEnd = (leng - i) - 1; //last value
-                if (arr[i] != arr[idEnd]) return false;
+                int idEnd = (lenghtNumber - i) - 1; //last value
+                if (arrayOfNumbers[i] != arrayOfNumbers[idEnd]) return false;
             }
             return true;
         }
