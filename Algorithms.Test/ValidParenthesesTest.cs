@@ -10,6 +10,12 @@ namespace Algorithms.Test
             _validParentheses = new ValidParentheses();
         }
         [Fact]
+        public void IsValid_EmptyString_ReturnFalse() {
+            string stringSymbols = string.Empty;
+            bool result = _validParentheses.IsValid(stringSymbols);
+            Assert.False(result);
+        }
+        [Fact]
         public void IsValid_OnlyLeftParenthesis_ReturnFalse() {
             string stringSymbols = "(((((((((((";
             bool result = _validParentheses.IsValid(stringSymbols);
