@@ -14,8 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\1470.ShuffletheArray\1470.ShuffletheArray.csproj" />
-    <ProjectReference Include="..\1480.RunningSumof1dArray\1480.RunningSumof1dArray.csproj" />
+    <ProjectReference Include="..\Algorithms\Algorithms.csproj" />
   </ItemGroup>
 
 </Project>
